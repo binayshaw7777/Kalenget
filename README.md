@@ -5,5 +5,5 @@ Kalenget is a simple Calendar Home screen Widget made using Kotlin and Jetpack C
 
 ## Clone the repository
 ```
-git clone https://github.com/hamidovmurad/drops_water_android
+git clone https://github.com/binayshaw7777/Kalenget
 ```
