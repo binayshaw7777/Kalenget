@@ -14,6 +14,7 @@ import androidx.glance.action.clickable
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
 import androidx.glance.appwidget.SizeMode
+import androidx.glance.appwidget.cornerRadius
 import androidx.glance.appwidget.provideContent
 import androidx.glance.appwidget.updateAll
 import androidx.glance.background
@@ -70,13 +71,16 @@ fun KalengetContent(
     context: Context
 ) {
     Box(
-        modifier = GlanceModifier.background(
-            ColorProvider(
-                day = Color(0XFF8390B2),
-                night = Color(0XFF343C51)
+        modifier = GlanceModifier
+            .cornerRadius(30.dp)
+            .fillMaxSize()
+            .background(
+                ColorProvider(
+                    day = Color(0XFF8390B2),
+                    night = Color(0XFF343C51)
+                )
             )
-        )
-            .fillMaxSize().padding(16.dp).clickable {
+            .padding(16.dp).clickable {
                 Toast.makeText(
                     context,
                     "Today is ${
@@ -96,8 +100,8 @@ fun KalengetContent(
                 text = calendar.get(Calendar.DATE).toString(),
                 style = TextStyle(
                     color = ColorProvider(
-                        day = Color.White.copy(alpha = 0.6f),
-                        night = Color.White.copy(alpha = 0.4f)
+                        day = Color(0XFF3A3F4E),
+                        night = Color(0XFFCDD5EA)
                     ),
                     fontSize = 64.sp,
                     fontWeight = FontWeight.Bold
@@ -117,8 +121,8 @@ fun KalengetContent(
                     ) ?: "SUNDAY",
                     style = TextStyle(
                         color = ColorProvider(
-                            day = Color.White.copy(alpha = 0.4f),
-                            night = Color.White.copy(alpha = 0.2f)
+                            day = Color(0XFF4F566B),
+                            night = Color(0XFF9AA2B7)
                         ),
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold
@@ -134,8 +138,8 @@ fun KalengetContent(
                     }, ${calendar.get(Calendar.YEAR)}",
                     style = TextStyle(
                         color = ColorProvider(
-                            day = Color.White.copy(alpha = 0.4f),
-                            night = Color.White.copy(alpha = 0.2f)
+                            day = Color(0XFF4F566B),
+                            night = Color(0XFF9AA2B7)
                         ),
                         fontSize = 24.sp,
                         fontWeight = FontWeight.Bold
