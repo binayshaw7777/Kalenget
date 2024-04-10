@@ -111,7 +111,7 @@ fun KalengetContent(
             Column(
                 modifier = GlanceModifier.padding(horizontal = 10.dp),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.Start
             ) {
                 Text(
                     text = calendar.getDisplayName(
